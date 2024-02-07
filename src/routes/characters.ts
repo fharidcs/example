@@ -1,6 +1,7 @@
+// src/routes/characters.ts
 import express, { Request, Response } from 'express';
 import axios from 'axios';
-import { isValidApiKey } from '../utils/auth';
+import { generateMarvelHash } from '../utils/auth';
 import { getConfig } from '../utils/config';
 
 const router = express.Router();
@@ -10,7 +11,9 @@ router.get('/', async (req: Request, res: Response) => {
     const apiUrl = `${getConfig().apiUrl}/characters`;
 
     const params = {
-      apikey: process.env.MARVEL_API_KEY,
+      apikey: process.env.MARVEL_API_PUBLIC_KEY,
+      ts: process.env.MARVEL_TS,
+      hash: generateMarvelHash(),
     };
 
     const response = await axios.get(apiUrl, { params });

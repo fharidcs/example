@@ -1,11 +1,9 @@
 {
     "development": {
-        "apiUrl": "https://gateway.marvel.com/v1/public",
-        "marvelApiKey": "TU_CLAVE_API_DE_MARVEL_DEV"
+        "apiUrl": "https://gateway.marvel.com/v1/public"
       },
       "production": {
-        "apiUrl": "https://gateway.marvel.com/v1/public",
-        "marvelApiKey": "TU_CLAVE_API_DE_MARVEL_PROD"
+        "apiUrl": "https://gateway.marvel.com/v1/public"
       }
 }
   
