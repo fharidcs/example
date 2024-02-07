@@ -37,10 +37,10 @@ function isValidApiKey(apiKey: string): boolean {
 // Endpoint para obtener cómics de Marvel con autenticación
 app.get('/v1/public/comics', authenticationDecorator, async (req: Request, res: Response) => {
   try {
-    const apiUrl = 'https://gateway.marvel.com/v1/public/comics';
+    const apiUrl = 'https://developer.marvel.com/v1/public/comics';
 
     const params = {
-      apikey: config.marvelApiKey,
+      apikey: process.env.MARVEL_API_KEY,
     };
 
     const response = await axios.get(apiUrl, { params });
