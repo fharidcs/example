@@ -13,11 +13,23 @@ Este es un proyecto de ejemplo para crear una API RESTful utilizando Node.js, Ex
 1. Clona este repositorio:
 
    ```bash
-   git clone https://github.com/tu-usuario/tu-proyecto.git
+   git clone hgit@github.com:fharidcs/example.git
    cd tu-proyecto
 
 2. Crea un archivo .env en la raíz del proyecto y agrega tu clave de API de Marvel:
-    MARVEL_API_KEY=TU_CLAVE_DE_API_DE_MARVEL
+    Template:
+
+    PORT=3000
+
+    NODE_ENV=development
+
+    MARVEL_API_PUBLIC_KEY='tu llave publica de la pagina de marvel'
+
+    MARVEL_API_PRIVATE_KEY='tu llave privada de la pagina de marvel'
+
+    MARVEL_TS=1
+
+    MARVEL_HASH='Resultado de Md5 para testing'
 
 3. Instalación
     npm install
