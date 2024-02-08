@@ -24,3 +24,5 @@ app.use('/v1/public/creators', creatorsRouter);
 app.listen(PORT, () => {
   console.log(`Servidor escuchando en el puerto ${PORT} en el entorno ${process.env.NODE_ENV}`);
 });
+
+export default app;
